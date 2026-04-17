@@ -8,4 +8,4 @@ const message = async (params) => {
     })
 }
 
-export { message }
+export default message
