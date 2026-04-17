@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import message from "./components/utils/messages.jsx";
+import message from "./components/utils/message.jsx";
 import "./App.css";
 
 const App = () => {
