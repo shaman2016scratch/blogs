@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import message from "./components/utils/messagex.jss";
+import message from "./components/utils/messages.jsx";
 import "./App.css";
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
 	    return (
             <div>
 			    <h1>Blogs8787</h1>
-        </div>
+            </div>
 	    );
 	} else {
         return (

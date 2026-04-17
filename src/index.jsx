@@ -10,7 +10,7 @@ if (!localStorage.getItem('blogs8787-language')) {
 function updLang() {localStorage.setItem('blogs8787-language', document.getElementById('languageUser').value)}
 
 document.getElementById("title").textContent = message({
-    id: 'title'
+    id: 'title.text'
 })
 
 createRoot(document.getElementById("root")).render(
@@ -37,7 +37,9 @@ createRoot(document.getElementById("root")).render(
                     <option value="ru" id='langRu'>Русский</option>
                     <option value="en" id='langEn'>English</option>
                 </select><button onClick={() => updLang()}>УСТАНОВИТЬ ЯЗЫК/SET LANG</button>
-				<p class="footer-text"><i>Данный сервис написан на JavaScript React и JavaScript SHAMAN2016</i></p>
+				<p class="footer-text"><i>{message({
+                    id: 'footer.langCreated'
+                })}</i></p>
             </div>
         </footer>
 	</StrictMode>

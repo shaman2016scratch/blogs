@@ -36,10 +36,17 @@ let messages = {
             }
         }
     },
-    'title': {
+    'title.text': {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `Blogs8787 - новая платформа для блогов`
+            }
+        }
+    },
+    'footer.langCreated': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Данный сервис написан на JavaScript React и JavaScript SHAMAN2016`
             }
         }
     }
