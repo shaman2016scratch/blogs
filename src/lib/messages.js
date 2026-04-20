@@ -49,6 +49,11 @@ let messages = {
                 return `Данный сервис написан на JavaScript React и JavaScript SHAMAN2016`
             }
         }
+    },
+    'footer.languageSet.button.text': {
+        value: function(data) {
+            return `Set language`
+        }
     }
 }
 
