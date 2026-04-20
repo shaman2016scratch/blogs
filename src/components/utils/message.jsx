@@ -7,10 +7,13 @@ const message = async (params) => {
     } else {
         lang = params.language
     }
-    let message = await messages?[params.id]?.value({
-        lang,
-        data: params.data
-    }) : 'Error in get element'
+    let message = 'Error in get element'
+    if (messages[params.id]) {
+        message = await messages[params.id].value({
+            lang,
+            data: params.data
+        })
+    } 
     return message
 }
 

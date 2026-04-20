@@ -5,6 +5,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `Версия: ${metadata.version}`
+            } else if (data.lang === 'en') {
+                return `Version: ${metadata.version}`
             }
         }
     },
@@ -12,6 +14,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `Ваш язык: `
+            } else if (data.lang === 'en') {
+                return `Your language:`
             }
         }
     },
@@ -19,6 +23,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `О сервисе`
+            } else if (data.lang === 'en') {
+                return `About`
             }
         }
     },
@@ -33,6 +39,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `Эта страница в разработке`
+            } else if (data.lang === 'en') {
+                return `Page in developent`
             }
         }
     },
@@ -40,6 +48,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `${metadata.zaname} - новая платформа для блогов`
+            } else if (data.lang === 'en') {
+                return `${metadata.zaname} - new plathorm for blogs`
             }
         }
     },
@@ -47,6 +57,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `Данный сервис написан на JavaScript React и JavaScript SHAMAN2016`
+            } else if (data.lang === 'en') {
+                return `Service ${metadata.zaname} created in React and JS by SHAMANA2016`
             }
         }
     },
@@ -57,7 +69,7 @@ let messages = {
     },
     'pages.main.about.main': {
         value: function(data) {
-            return `${metadata.zaname} - это новый сервис для создания ботов. К сожелению его api и он сам ещё в разработке, но сайт частично готов.`
+            return `${metadata.zaname} - это новый сервис для создания блогов. К сожелению его api и он сам ещё в разработке, но сайт частично готов.`
         }
     }
 }
