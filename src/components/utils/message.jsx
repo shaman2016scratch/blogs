@@ -7,10 +7,11 @@ const message = async (params) => {
     } else {
         lang = params.language
     }
-    return await messages[params.id].value({
+    let message = await messages?[params.id]?.value({
         lang,
         data: params.data
-    })
+    }) : 'Error in get element'
+    return message
 }
 
 export default message

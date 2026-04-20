@@ -7,6 +7,9 @@ const App = () => {
 	    return (
             <div>
 			    <h1>Blogs8787</h1>
+				<p>{message({
+                    id: 'pages.main.about.main'
+                })}</p>
             </div>
 	    );
 	} else {

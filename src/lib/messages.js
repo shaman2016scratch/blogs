@@ -25,7 +25,7 @@ let messages = {
     'footer.desctribution': {
         value: function(data) {
             if (data.lang === 'ru') {
-                return `(C) 2026, blogs8787 - новая русская платформа для блогов от SHAMAN2016 с открытым исходным кодом!`
+                return `(C) 2026, ${metadata.name} - новая русская платформа для блогов от SHAMAN2016 с открытым исходным кодом!`
             }
         }
     },
@@ -39,7 +39,7 @@ let messages = {
     'title.text': {
         value: function(data) {
             if (data.lang === 'ru') {
-                return `Blogs8787 - новая платформа для блогов`
+                return `${metadata.zaname} - новая платформа для блогов`
             }
         }
     },
@@ -53,6 +53,11 @@ let messages = {
     'footer.languageSet.button.text': {
         value: function(data) {
             return `Set language`
+        }
+    },
+    'pages.main.about.main': {
+        value: function(data) {
+            return `${metadata.zaname} - это новый сервис для создания ботов. К сожелению его api и он сам ещё в разработке, но сайт частично готов.`
         }
     }
 }

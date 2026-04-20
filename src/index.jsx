@@ -24,9 +24,9 @@ createRoot(document.getElementById("root")).render(
                 })}</p>
 				<p class='footer-text'>© MIT LICENSE</p>
 				<p class='footer-text'>
-					<a href='/BluOf/about.html'>{message({
-                    id: 'footer.about.text'
-                })}</a>
+					<a href='/blogs/about.html'>{message({
+                        id: 'footer.about.text'
+                    })}</a>
 				</p>
 				<p class="footer-text">{message({
                     id: 'footer.version'
