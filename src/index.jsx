@@ -37,7 +37,9 @@ createRoot(document.getElementById("root")).render(
 				<select id='languageUser'>
                     <option value="ru" id='langRu'>Русский</option>
                     <option value="en" id='langEn'>English</option>
-                </select><button onClick={() => updLang()}>УСТАНОВИТЬ ЯЗЫК/SET LANG</button>
+                </select><button onClick={() => updLang()}>{message({
+                    id: 'footer.languageSet.button.text'
+                })}</button>
 				<p class="footer-text"><i>{message({
                     id: 'footer.langCreated'
                 })}</i></p>
