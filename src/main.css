@@ -28,3 +28,15 @@ body {
       color: #3498db;
       text-decoration: none;
     }
+  .top-panel {
+ background-color: #9688883a;
+ color: #838f95;
+ padding: 10px;
+ text-align: center;
+ }
+        
+ .top-panel a {
+ color: #838f95;
+ text-decoration: none;
+ margin: 0 20px;
+ }
