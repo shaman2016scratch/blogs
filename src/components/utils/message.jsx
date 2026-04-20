@@ -1,6 +1,6 @@
-import { messages } from "../../lib/messages.js"
+import { messages, warns } from "../../lib/messages.js"
 
-const message = (params) => {
+const newMessage = (params) => {
     let lang = 'ru'
     if (!params.language) {
         lang = localStorage.getItem('blogs8787-language')
@@ -17,4 +17,21 @@ const message = (params) => {
     return message
 }
 
-export default message
+const newWarn = (params) => {
+    let lang = 'ru'
+    if (!params.language) {
+        lang = localStorage.getItem('blogs8787-language')
+    } else {
+        lang = params.language
+    }
+    let warn = 'Error in get element'
+    if (warns[params.id]) {
+        warn = warns[params.id].value({
+            lang,
+            data: params.data
+        })
+    } 
+    return warn
+}
+
+export { newMessage, newWarn }

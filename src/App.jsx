@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import message from "./components/utils/message.jsx";
+import { newMessage } from "./components/utils/message.jsx";
 
 const App = () => {
 	const page = window.location.pathname.split("/blogs")[1]
@@ -7,7 +7,7 @@ const App = () => {
 	    return (
             <div>
 			    <h1>Blogs8787</h1>
-				<p>{message({
+				<p>{newMessage({
                     id: 'pages.main.about.main'
                 })}</p>
             </div>
@@ -16,7 +16,7 @@ const App = () => {
         return (
 			<div>
 			    <h1>Blogs8787</h1>
-                <p>{message({
+                <p>{newMessage({
                     id: 'error.pageInDev.text1'
                 })}</p>
             </div>

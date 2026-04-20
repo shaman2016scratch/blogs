@@ -69,9 +69,13 @@ let messages = {
     },
     'pages.main.about.main': {
         value: function(data) {
-            return `${metadata.zaname} - это новый сервис для создания блогов. К сожелению его api и он сам ещё в разработке, но сайт частично готов.`
+            if (data.lang === 'ru') {
+                return `${metadata.zaname} - это новый сервис для создания блогов. К сожелению его api и он сам ещё в разработке, но сайт частично готов.`
+            }
         }
     }
 }
 
-export { messages }
+let warns = {}
+
+export { messages, warns }
