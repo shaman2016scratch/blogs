@@ -10,10 +10,6 @@ if (!localStorage.getItem('blogs8787-language')) {
 
 function updLang() {localStorage.setItem('blogs8787-language', document.getElementById('languageUser').value)}
 
-document.getElementById("title").textContent = newMessage({
-    id: 'title.text'
-})
-
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
 		<App />
