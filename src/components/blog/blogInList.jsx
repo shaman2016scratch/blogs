@@ -12,3 +12,5 @@ const BLOG = (id, name, author) => {
     </div>
   )
 }
+
+export default BLOG
