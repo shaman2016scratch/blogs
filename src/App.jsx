@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { newMessage } from "./components/utils/message.jsx";
+import AboutBlogs from "./pages/about/about.jsx";
 
 const App = () => {
 	const page = window.location.pathname.split("/blogs")[1]
@@ -12,6 +13,10 @@ const App = () => {
                 })}</p>
             </div>
 	    );
+	} else if (page === "/about.html" || page === "/about")) {
+		return (
+			<AboutBlogs />
+		)
 	} else {
         return (
 			<div>
