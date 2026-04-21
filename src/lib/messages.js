@@ -80,6 +80,15 @@ let messages = {
                 return `by `
             }
         }
+    },
+    'aboutPage.header.aboutService': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `О ${metadata.name}`
+            } else if (data.lang === 'en') {
+                return `About ${metadata.name}`
+            }
+        }
     }
 }
 
