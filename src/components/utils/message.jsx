@@ -51,4 +51,4 @@ const customMessage = (data, params) => {
     return message
 }
 
-export { newMessage, newWarn }
+export { newMessage, newWarn, customMessage }
