@@ -13,7 +13,7 @@ const App = () => {
                 })}</p>
             </div>
 	    );
-	} else if (page === "/about.html" || page === "/about")) {
+	} else if (page === "/about.html" || page === "/about") {
 		return (
 			<AboutBlogs />
 		)
