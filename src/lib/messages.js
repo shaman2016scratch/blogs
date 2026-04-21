@@ -78,4 +78,14 @@ let messages = {
 
 let warns = {}
 
-export { messages, warns }
+const addElement = (type, id, data) => {
+    if (type === 'message') {
+        messages[id] = data
+    } else if (type === 'warn') {
+        warns[id] = data
+    } else {
+        console.error('Type element not found')
+    }
+}
+
+export { messages, warns, addElement }
