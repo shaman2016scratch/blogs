@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import './main.css'
 import App from "./App.jsx";
 import { newMessage } from "./components/utils/message.jsx";
+import { metadata } from "./lib/metadata.js"
 
 if (!localStorage.getItem('blogs8787-language')) {
 	localStorage.setItem('blogs8787-language', 'ru')
@@ -20,6 +21,7 @@ createRoot(document.getElementById("root")).render(
                 })}</p>
 				<p class='footer-text'>© MIT LICENSE</p>
 				<p class='footer-text'>
+					<a href='/blogs/'>{metadata.name}</a>|
 					<a href='/blogs/about.html'>{newMessage({
                         id: 'footer.about.text'
                     })}</a>
