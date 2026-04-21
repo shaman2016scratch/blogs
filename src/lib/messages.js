@@ -98,6 +98,15 @@ let messages = {
                 return `About ${metadata.zaname} - new plathorm for blogs`
             }
         }
+    },
+    'error.pageInDev.title.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Страница в разработке | ${metadata.name}`
+            } else if (data.lang === 'en') {
+                return `Page in development | ${metadata.name}`
+            }
+        }
     }
 }
 
