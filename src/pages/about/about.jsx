@@ -1,1 +1,1 @@
-import { newMessage } from '../../components/messages.jsx'
+import { newMessage } from '../../components/message.jsx'
