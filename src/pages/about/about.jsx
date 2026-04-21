@@ -1,4 +1,4 @@
-import { newMessage } from '../../components/message.jsx'
+import { newMessage } from '../../components/utils/message.jsx'
 
 const AboutBlogs = () => {
     return (
