@@ -7,3 +7,5 @@ const AboutBlogs = () => {
         })}</h1>
     )
 }
+
+export default AboutBlogs
