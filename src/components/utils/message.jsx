@@ -34,4 +34,21 @@ const newWarn = (params) => {
     return warn
 }
 
+const customMessage = (data, params) => {
+    let lang = 'ru'
+    if (!params.language) {
+        lang = localStorage.getItem('blogs8787-language')
+    } else {
+        lang = params.language
+    }
+    let message = 'Error in get element'
+    if (messages[params.id]) {
+        message = data[params.id].value({
+            lang,
+            data: params.data
+        })
+    } 
+    return message
+}
+
 export { newMessage, newWarn }
