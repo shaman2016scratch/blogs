@@ -73,6 +73,13 @@ let messages = {
                 return `${metadata.zaname} - это новый сервис для создания блогов. К сожелению его api и он сам ещё в разработке, но сайт частично готов.`
             }
         }
+    },
+    'blogList.blog.by': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `by `
+            }
+        }
     }
 }
 
