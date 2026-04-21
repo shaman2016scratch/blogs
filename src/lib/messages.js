@@ -89,6 +89,15 @@ let messages = {
                 return `About ${metadata.name}`
             }
         }
+    },
+    'about.title.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `О ${metadata.zaname} - новая платформа для блогов`
+            } else if (data.lang === 'en') {
+                return `About ${metadata.zaname} - new plathorm for blogs`
+            }
+        }
     }
 }
 
