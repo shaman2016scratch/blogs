@@ -155,6 +155,51 @@ let messages = {
                 return `Открыть`
             }
         }
+    },
+    'footer.theme.label': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Тема: `
+            } else if (data.lang === 'en') {
+                return `Theme: `
+            }
+        }
+    },
+    'footer.theme.option1': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Тёмная`
+            } else if (data.lang === 'en') {
+                return `Dark`
+            }
+        }
+    },
+    'footer.theme.option2': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Светлая`
+            } else if (data.lang === 'en') {
+                return `Light`
+            }
+        }
+    },
+    'footer.theme.setButton.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `сменить`
+            } else if (data.lang === 'en') {
+                return `set`
+            }
+        }
+    },
+    'pages.main.authors.header': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Авторы`
+            } else if (data.lang === 'en') {
+                return `Authors`
+            }
+        }
     }
 }
 

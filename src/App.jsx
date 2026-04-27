@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { newMessage } from "./components/utils/message.jsx";
+import Authors from "./components/authors/authors.jsx";
 import AboutBlogs from "./pages/about/about.jsx";
 
 const App = () => {
@@ -14,6 +15,10 @@ const App = () => {
 				<p>{newMessage({
                     id: 'pages.main.about.main'
                 })}</p>
+				<h2>{newMessage({
+                    id: 'pages.main.authors.header'
+                })}</h2>
+				<Authors />
             </div>
 	    );
 	} else if (page === "/about.html" || page === "/about") {
