@@ -141,6 +141,20 @@ let messages = {
                 return `Статус: ${data.data.status}`
             }
         }
+    },
+    'placeholder.description.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Описание`
+            }
+        }
+    },
+    'open.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Открыть`
+            }
+        }
     }
 }
 
