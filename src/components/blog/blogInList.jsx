@@ -7,8 +7,12 @@ const BLOG = (id, name, author) => {
       {newMessage({
         id: 'blogList.blog.by'
       })}<b>{author}</b>
-      <p class='description'>Description</p>
-      <a href='/blogs/blog?id={id}'><button>Open</button></a>
+      <p class='description'>{newMessage({
+        id: 'placeholder.description.text'
+      })}</p>
+      <a href='/blogs/blog?id={id}'><button>{newMessage({
+        id: 'open.text'
+      })}</button></a>
     </div>
   )
 }
