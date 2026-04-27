@@ -7,6 +7,8 @@ let messages = {
                 return `Версия: ${metadata.version}`
             } else if (data.lang === 'en') {
                 return `Version: ${metadata.version}`
+            } else if (data.lang === 'kwakRu') {
+                return `Кварсия: ${metadata.version}`
             }
         }
     },
@@ -15,7 +17,9 @@ let messages = {
             if (data.lang === 'ru') {
                 return `Ваш язык: `
             } else if (data.lang === 'en') {
-                return `Your language:`
+                return `Your language: `
+            } else if (data.lang === 'kwakRu') {
+                return `Ваш квазык: `
             }
         }
     },
@@ -25,6 +29,8 @@ let messages = {
                 return `О сервисе`
             } else if (data.lang === 'en') {
                 return `About`
+            } else if (data.lang === 'kwakRu') {
+                return `О болоте`
             }
         }
     },
@@ -32,6 +38,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `(C) 2026, ${metadata.name} - новая русская платформа для блогов от SHAMAN2016 с открытым исходным кодом!`
+            } else if (data.lang === 'kwakRu') {
+                return `(C) 2026, БолотныеБлоги - новая болотная платформа для блогов с открытым исходным кодом!`
             }
         }
     },
@@ -40,7 +48,9 @@ let messages = {
             if (data.lang === 'ru') {
                 return `Эта страница в разработке`
             } else if (data.lang === 'en') {
-                return `Page in developent`
+                return `This page in developent`
+            } else if (data.lang === 'kwakRu') {
+                return `Эта жабица в квазработке`
             }
         }
     },
@@ -50,6 +60,8 @@ let messages = {
                 return `${metadata.zaname} - новая платформа для блогов`
             } else if (data.lang === 'en') {
                 return `${metadata.zaname} - new plathorm for blogs`
+            } else if (data.lang === 'kwakRu') {
+                return `БотоныеБлоги - новая кватформа для кваков`
             }
         }
     },
@@ -59,6 +71,8 @@ let messages = {
                 return `Данный сервис написан на JavaScript React и JavaScript SHAMAN2016`
             } else if (data.lang === 'en') {
                 return `Service ${metadata.zaname} created in React and JS by SHAMANA2016`
+            } else if (data.lang === 'kwakRu') {
+                return `Данный сервис зажабен на Реактивном ЖабаСкрипте и ЖабаСкрипте`
             }
         }
     },
@@ -71,6 +85,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `${metadata.zaname} - это новый сервис для создания блогов. К сожелению его api и он сам ещё в разработке, но сайт частично готов.`
+            } else if (data.lang === 'kwakRu') {
+                return `БолотныеБлоги - это новый кварвис для создания кваков.`
             }
         }
     },
@@ -78,6 +94,8 @@ let messages = {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `by `
+            } else if (data.lang === 'kwakRu') {
+                return `Жабка автор: `
             }
         }
     },
@@ -87,6 +105,8 @@ let messages = {
                 return `О ${metadata.name}`
             } else if (data.lang === 'en') {
                 return `About ${metadata.name}`
+            } else if (data.lang === 'kwakRu') {
+                return `О болоте`
             }
         }
     },
@@ -104,13 +124,23 @@ let messages = {
             if (data.lang === 'ru') {
                 return `Страница в разработке | ${metadata.name}`
             } else if (data.lang === 'en') {
-                return `Page in development | ${metadata.name}`
+                return `This page in development | ${metadata.name}`
             }
         }
     }
 }
 
-let warns = {}
+let warns = {
+    'inDev.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Страница в разработке!`
+            } else if (data.lang === 'en') {
+                return `This page in development!`
+            }
+        }
+    }
+}
 
 const addElement = (type, id, data) => {
     if (type === 'message') {
