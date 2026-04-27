@@ -127,6 +127,20 @@ let messages = {
                 return `This page in development | ${metadata.name}`
             }
         }
+    },
+    'status.blog.label': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Статус блога: ${data.data.status}`
+            }
+        }
+    },
+    'status.label': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Статус: ${data.data.status}`
+            }
+        }
     }
 }
 
@@ -137,6 +151,20 @@ let warns = {
                 return `Страница в разработке!`
             } else if (data.lang === 'en') {
                 return `This page in development!`
+            }
+        }
+    },
+    'podozritelnuyUser.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Данный пользователь помечен как подозрительный`
+            }
+        }
+    },
+    'podozritelnuyBlog.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Данный блог помечен как подозрительный`
             }
         }
     }
