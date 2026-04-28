@@ -65,5 +65,3 @@ createRoot(document.getElementById("root")).render(
         </footer>
 	</StrictMode>
 );
-
-setTheme()

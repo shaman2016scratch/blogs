@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { newMessage } from "./components/utils/message.jsx";
 import Authors from "./components/authors/authors.jsx";
+import Developers from "./components/developers/developers.jsx";
 import AboutBlogs from "./pages/about/about.jsx";
 
 const App = () => {
@@ -19,6 +20,10 @@ const App = () => {
                     id: 'pages.main.authors.header'
                 })}</h2>
 				<Authors />
+				<h2>{newMessage({
+                    id: 'pages.main.developers.header'
+                })}</h2>
+				<Developers />
             </div>
 	    );
 	} else if (page === "/about.html" || page === "/about") {
@@ -27,6 +32,13 @@ const App = () => {
         })
 		return (
 			<AboutBlogs />
+		)
+	} else if (page === "/credits.html" || page === "/credits") {
+		document.getElementById("title").textContent = newMessage({
+            id: 'credits.title.text'
+        })
+		return (
+			<CreditsBlogs />
 		)
 	} else {
 		document.getElementById("title").textContent = newMessage({

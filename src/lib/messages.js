@@ -200,6 +200,33 @@ let messages = {
                 return `Authors`
             }
         }
+    },
+    'pages.main.developers.header': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Разработчики`
+            } else if (data.lang === 'en') {
+                return `Developers`
+            }
+        }
+    },
+    'cresitsPage.header.creditsService': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Благодарности Blogs8787`
+            } else if (data.lang === 'en') {
+                return `Credits Blogs8787`
+            }
+        }
+    },
+    'credits.title.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Благодарности Blogs8787`
+            } else if (data.lang === 'en') {
+                return `Credits Blogs8787`
+            }
+        }
     }
 }
 

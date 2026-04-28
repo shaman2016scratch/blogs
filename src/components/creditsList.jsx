@@ -1,6 +1,6 @@
 import { newMessage } from './utils/message.jsx'
 
-const CreditsComponent = ({list, type}) => {
+const CreditsComponent = ({list, type, isList}) => {
     const GetMan = ({data}) => {
         return (
             <li><b>{data.name}</b> <i>{data.role}</i></li>
