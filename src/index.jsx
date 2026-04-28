@@ -1,7 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import theme1 from './main.css'
-import theme2 from './main2.css'
+import { theme1, theme2 } from './lib/themes.js'
 import App from "./App.jsx";
 import { newMessage } from "./components/utils/message.jsx";
 import { metadata } from "./lib/metadata.js"
