@@ -17,16 +17,18 @@ const theme = localStorage.getItem('blogs8787-language')
 function updLang() {localStorage.setItem('blogs8787-language', document.getElementById('languageUser').value)}
 function updTheme() {localStorage.setItem('blogs8787-theme', document.getElementById('themeFooter').value)}
 
-useEffect(() => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    if (theme === 'theme1') {
-        link.href = theme1
-    } else if (theme === 'theme2') {
-        link.href= theme2
-    }
-    document.head.appendChild(link);
-})
+function setTheme() {
+    useEffect(() => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        if (theme === 'theme1') {
+            link.href = theme1
+        } else if (theme === 'theme2') {
+            link.href= theme2
+        }
+        document.head.appendChild(link);
+    })
+}
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
@@ -77,3 +79,5 @@ createRoot(document.getElementById("root")).render(
         </footer>
 	</StrictMode>
 );
+
+setTheme()
