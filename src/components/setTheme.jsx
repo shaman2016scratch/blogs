@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react'
-import theme1 from './main.css?url'
-import theme2 from './main2.css?url'
+import theme1 from '../main.css?url'
+import theme2 from '../css/main2.css?url'
 
 function ThemeManager() {
   const currentLink = useRef(null)
