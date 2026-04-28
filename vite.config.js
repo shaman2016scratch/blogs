@@ -19,6 +19,8 @@ export default defineConfig({
         blog: resolve(__dirname, 'blog.html'),
         blogs: resolve(__dirname, 'blogs.html'),
         about: resolve(__dirname, 'about.html'),
+        theme1css: resolve(__dirname, 'main.css'),
+        theme2css: resolve(__dirname, 'main2.css'),
       }
     }
   }
