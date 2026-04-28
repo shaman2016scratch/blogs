@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import theme1 from '../main.css?url'
+import theme1 from '../css/main.css?url'
 import theme2 from '../css/main2.css?url'
 
 function ThemeManager() {
