@@ -1,4 +1,4 @@
-import { newMessage } from '../utils/message.jsx'
+import { newMessage } from './utils/message.jsx'
 
 const CreditsComponent = ({list, type}) => {
     const GetMan = ({data}) => {
