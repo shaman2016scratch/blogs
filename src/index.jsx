@@ -1,7 +1,6 @@
 import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import theme1 from './main.css?url'
-import theme2 from './main2.css?url'
+import ThemeManager from './components/setTheme.jsx'
 import App from "./App.jsx";
 import { newMessage } from "./components/utils/message.jsx";
 import { metadata } from "./lib/metadata.js"
@@ -12,27 +11,14 @@ if (!localStorage.getItem('blogs8787-language')) {
 if (!localStorage.getItem('blogs8787-theme')) {
 	localStorage.setItem('blogs8787-theme', 'theme1')
 }
-const theme = localStorage.getItem('blogs8787-language')
 
 function updLang() {localStorage.setItem('blogs8787-language', document.getElementById('languageUser').value)}
 function updTheme() {localStorage.setItem('blogs8787-theme', document.getElementById('themeFooter').value)}
 
-function setTheme() {
-    useEffect(() => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        if (theme === 'theme1') {
-            link.href = theme1
-        } else if (theme === 'theme2') {
-            link.href= theme2
-        }
-        document.head.appendChild(link);
-    })
-}
-
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
 		<App />
+        <ThemeManager />
 		<footer>
             <div class="container">
                 <p class="footer-text">{newMessage({
@@ -67,7 +53,7 @@ createRoot(document.getElementById("root")).render(
                         id: 'footer.theme.option1'
                     })}</option>
                     <option value="theme2">{newMessage({
-                        id: 'footer.theme.option1'
+                        id: 'footer.theme.option2'
                     })}</option>
                 </select><button onClick={() => updTheme()}>{newMessage({
                     id: 'footer.theme.setButton.text'
