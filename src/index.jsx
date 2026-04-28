@@ -12,15 +12,19 @@ if (!localStorage.getItem('blogs8787-language')) {
 if (!localStorage.getItem('blogs8787-theme')) {
 	localStorage.setItem('blogs8787-theme', 'theme1')
 }
+const theme = localStorage.getItem('blogs8787-language')
 
 function updLang() {localStorage.setItem('blogs8787-language', document.getElementById('languageUser').value)}
 function updTheme() {localStorage.setItem('blogs8787-theme', document.getElementById('themeFooter').value)}
 
-if (localStorage.getItem('blogs8787-theme') === 'theme1') {
-    document.getElementById('css').href = theme1
-} else if (localStorage.getItem('blogs8787-theme') === 'theme2') {
-    document.getElementById('css').href = theme2
+const link = document.createElement('link');
+link.rel = 'stylesheet';
+if (theme === 'theme1') {
+    link.href = theme1
+} else if (theme === 'theme2') {
+    link.href= theme2
 }
+document.head.appendChild(link);
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
