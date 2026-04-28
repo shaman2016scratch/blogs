@@ -1,4 +1,4 @@
-import { StrictMode } from "react";
+import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import theme1 from './main.css?url'
 import theme2 from './main2.css?url'
@@ -17,14 +17,16 @@ const theme = localStorage.getItem('blogs8787-language')
 function updLang() {localStorage.setItem('blogs8787-language', document.getElementById('languageUser').value)}
 function updTheme() {localStorage.setItem('blogs8787-theme', document.getElementById('themeFooter').value)}
 
-const link = document.createElement('link');
-link.rel = 'stylesheet';
-if (theme === 'theme1') {
-    link.href = theme1
-} else if (theme === 'theme2') {
-    link.href= theme2
-}
-document.head.appendChild(link);
+useEffect(() => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    if (theme === 'theme1') {
+        link.href = theme1
+    } else if (theme === 'theme2') {
+        link.href= theme2
+    }
+    document.head.appendChild(link);
+})
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
