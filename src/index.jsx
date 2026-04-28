@@ -4,6 +4,7 @@ import ThemeManager from './components/setTheme.jsx'
 import App from "./App.jsx";
 import { newMessage } from "./components/utils/message.jsx";
 import { metadata } from "./lib/metadata.js"
+import { genPath, genUrl } from './lib/genUrl.js'
 
 if (!localStorage.getItem('blogs8787-language')) {
 	localStorage.setItem('blogs8787-language', 'ru')
@@ -26,9 +27,12 @@ createRoot(document.getElementById("root")).render(
                 })}</p>
 				<p class='footer-text'>© MIT LICENSE</p>
 				<p class='footer-text'>
-					<a href='/blogs/'>{metadata.name}</a>|
-					<a href='/blogs/about.html'>{newMessage({
+					<a href={genPath('')}>{metadata.name}</a>|
+					<a href={genPath('about')}>{newMessage({
                         id: 'footer.about.text'
+                    })}</a>
+                    <a href={genPath('credits')}>{newMessage({
+                        id: 'footer.credits.text'
                     })}</a>
 				</p>
 				<p class="footer-text">{newMessage({

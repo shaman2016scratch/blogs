@@ -227,6 +227,15 @@ let messages = {
                 return `Credits Blogs8787`
             }
         }
+    },
+    'footer.credits.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Благодарности`
+            } else if (data.lang === 'en') {
+                return `Credits`
+            }
+        }
     }
 }
 
