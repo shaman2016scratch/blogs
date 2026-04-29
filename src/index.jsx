@@ -2,6 +2,7 @@ import { StrictMode, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import ThemeManager from './components/setTheme.jsx'
 import App from "./App.jsx";
+import TopPanel from "./components/tp/tp.jsx";
 import { newMessage } from "./components/utils/message.jsx";
 import { metadata } from "./lib/metadata.js"
 import { genPath, genUrl } from './lib/genUrl.js'
@@ -18,6 +19,7 @@ function updTheme() {localStorage.setItem('blogs8787-theme', document.getElement
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
+        <TopPanel />
 		<App />
         <ThemeManager />
 		<footer>

@@ -3,6 +3,7 @@ import { newMessage } from "./components/utils/message.jsx";
 import Authors from "./components/authors/authors.jsx";
 import Developers from "./components/developers/developers.jsx";
 import AboutBlogs from "./pages/about/about.jsx";
+import BlogList from "./components/blog/blogList.jsx";
 
 const App = () => {
 	const page = window.location.pathname.split("/blogs")[1]
@@ -24,6 +25,7 @@ const App = () => {
                     id: 'pages.main.developers.header'
                 })}</h2>
 				<Developers />
+				<BlogList type='rekomendacii' />
             </div>
 	    );
 	} else if (page === "/about.html" || page === "/about") {

@@ -236,6 +236,22 @@ let messages = {
                 return `Credits`
             }
         }
+    },
+    'pages.main.moderators.header': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Модераторы`
+            } else if (data.lang === 'en') {
+                return `Moderators`
+            }
+        }
+    },
+    'Rekomendacii.header': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Рекомендации`
+            }
+        }
     }
 }
 

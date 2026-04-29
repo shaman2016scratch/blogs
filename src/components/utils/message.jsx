@@ -51,10 +51,32 @@ const customMessage = (data, params) => {
     return message
 }
 
-const genMessage = (params, paramsM) => {
+const genMessage = ({params, paramsM}) => {
     return (
         <div class={params.class} id={params.id}>{newMessage(paramsM)}</div>
     )
 }
 
-export { newMessage, newWarn, customMessage, genMessage }
+const Message = ({data, id}) => {
+    return (
+        <div>
+            {newMessage({
+                id,
+                data
+            })}
+        </div>
+    )
+}
+
+const Warn = ({data, id}) => {
+    return (
+        <div>
+            {newWarn({
+                id,
+                data
+            })}
+        </div>
+    )
+}
+
+export { newMessage, newWarn, customMessage, genMessage, Message, Warn }

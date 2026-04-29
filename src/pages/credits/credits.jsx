@@ -2,6 +2,7 @@ import { newMessage } from '../../components/utils/message.jsx'
 import { CreditsComponent } from '../../components/creditsList.jsx'
 import authors from '../../lib/authors.js'
 import developers from '../../lib/developers.js'
+import moderators from '../../lib/moderators.js'
 
 const CreditsBlogs = () => {
     return (
@@ -17,6 +18,7 @@ const CreditsBlogs = () => {
                 id: 'pages.main.developers.header'
             })}</h2>
 			<CreditsComponent list={developers} type={'ul'} isList={true} />
+			<CreditsComponent list={moderators} type={'ul'} isList={true} labelId={'pages.main.moderators.header'} />
         </div>
     )
 }

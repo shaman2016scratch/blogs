@@ -8,4 +8,12 @@ const genPath = (path) => {
     return `${metadata.path}${path}`
 }
 
-export { genUrl, genPath }
+const genUrlNotBlogs = (url, path) => {
+    return `${url}/${path}`
+}
+
+const genPathNotBlogs = (path) => {
+    return `/${path}`
+}
+
+export { genUrl, genPath, genUrlNotBlogs, genPathNotBlogs }
