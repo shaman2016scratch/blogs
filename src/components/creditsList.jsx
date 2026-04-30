@@ -1,9 +1,34 @@
 import { newMessage } from './utils/message.jsx'
+import { genUrlNotBlogs } from '../lib/genUrl.js'
 
 const CreditsComponent = ({list, type, isList, labelText, labelId}) => {
+    const lang = localStorage.getItem('blogs-language')
+    const langIsEn = lang === 'en'
+    function userNotInGithub() {
+        alert(newMessage({
+            id: 'creditsComponent.error.userNotInGithub'
+        }))
+    }
+    const githubLink = ({user}) => {
+        const isGithub = user.githubName !== null
+        const link = genUrlNotBlogs('https://github.com', user.githubName)
+        return (
+            <div>
+                {isGithub ? (
+                    <a href={link}>Github</a>
+                ) : (
+                    <div onClick={() => userNotInGithub()}>Github</div>
+                )}
+            </div>
+        )
+    }
     const GetMan = ({data}) => {
         return (
-            <li><b>{data.name}</b> <i>{data.role}</i></li>
+            <li>
+                <b>{data.name}</b> 
+                <i>{langIsEn ? data.role : data.transtaleRole[lang]}</i> |
+                <githubLink user={data} />
+            </li>
         )
     }
     const typeUl = type === 'ul'

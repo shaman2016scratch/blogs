@@ -252,6 +252,13 @@ let messages = {
                 return `Рекомендации`
             }
         }
+    },
+    'creditsComponent.error.userNotInGithub': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `К сожелению, нет в Github`
+            }
+        }
     }
 }
 
