@@ -17,19 +17,25 @@ const CreditsComponent = ({list, type, isList, labelText, labelId}) => {
                 {isGithub ? (
                     <a href={link}>Github</a>
                 ) : (
-                    <div onClick={() => userNotInGithub()}>Github</div>
+                    <div onClick={() => userNotInGithub()}>
+                        <p>Github</p>
+                    </div>
                 )}
             </div>
         )
     }
     const GetMan = ({data}) => {
         const isMan = data !== null || data !== undefined
+        let role = data.role
+        if (!langIsEn) {
+            role = data.translateRole[lang]
+        }
         return (
             <div>
                 {isMan ? (
                     <li>
                         <b>{data.name}</b> 
-                        <i>{langIsEn ? data.role : data.translateRole[lang]}</i> |
+                        <i>{role}</i> | 
                         <githubLink user={data} />
                     </li>
                 ) : (
