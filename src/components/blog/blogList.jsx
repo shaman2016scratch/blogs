@@ -1,7 +1,7 @@
 import { newMessage, genMessage, customMessage, Message } from '../utils/message.jsx'
 import BLOG from './blogInList.jsx'
 
-const BlogList = ({type, tagType}) => {
+const BlogList = ({type}) => {
     const isInUser = type === 'inUser'
     const isInRecommendations = type === 'inRecommendations'
     return (
@@ -11,7 +11,7 @@ const BlogList = ({type, tagType}) => {
             ) : null}
             {isInRecommendations ? (
                 <div>
-                    <Message id='Rekomendacii.header' type={tagType || 'div'} />
+                    {}
                 </div>
             ) : null}
         </div>
