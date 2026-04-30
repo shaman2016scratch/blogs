@@ -5,12 +5,14 @@ import { isLogin } from '../../lib/session.js'
 
 const TopPanel = () => {
     const UserComponent = () => {
-        const LoginTPComponent = (
-            <div>
-                <a href={genPath('login')}><Message id={'tp.login'} /></a>
-                <a href={genPath('join')}><Message id={'tp.join'} /></a>
-            </div>
-        )
+        const LoginTPComponent = () => {
+            return (
+                <div>
+                    <a href={genPath('login')}><Message id={'tp.login'} /></a>
+                    <a href={genPath('join')}><Message id={'tp.join'} /></a>
+                </div>
+            )
+        }
         const UserMenuComponent = () => {
             return (
                 <div></div>

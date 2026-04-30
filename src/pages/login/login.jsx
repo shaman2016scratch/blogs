@@ -1,7 +1,9 @@
 import { LOGIN } from "../../components/login/login.jsx";
 
-const LoginPage = (
-    <LOGIN type='login' />
-)
+const LoginPage = () => {
+    return (
+        <LOGIN type='login' />
+    )
+}
 
 export default LoginPage
