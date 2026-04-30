@@ -2,7 +2,7 @@ import { newMessage } from './utils/message.jsx'
 import { genUrlNotBlogs } from '../lib/genUrl.js'
 
 const CreditsComponent = ({list, type, isList, labelText, labelId}) => {
-    const lang = localStorage.getItem('blogs-language')
+    const lang = localStorage.getItem('blogs8787-language')
     const langIsEn = lang === 'en'
     function userNotInGithub() {
         alert(newMessage({
