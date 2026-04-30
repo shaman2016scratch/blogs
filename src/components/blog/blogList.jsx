@@ -3,13 +3,13 @@ import BLOG from './blogInList.jsx'
 
 const BlogList = ({type}) => {
   const isInUser = type === 'inUser'
-  const isRekomendacii = type === 'rekomendacii'
+  const isInRecommendations = type === 'inRecommendations'
   return (
     <div class='blogs'>
       {isInUser ? (
         <div></div>
       ) : null}
-      {isInRekomendacii ? (
+      {isInRecommendations ? (
         <div>
           <Message id='Rekomendacii.header' />
         </div>
