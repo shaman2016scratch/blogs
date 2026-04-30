@@ -25,6 +25,7 @@ const App = () => {
                     id: 'pages.main.developers.header'
                 })}</h2>
 				<Developers />
+				<Message id='Rekomendacii.header' />
 				<BlogList type='inRecommendations' />
             </div>
 	    );
