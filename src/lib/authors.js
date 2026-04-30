@@ -5,7 +5,8 @@ const authors = [
         role: 'Creator',
         translateRole: {
             ru: 'Создатель',
-            kwakRu: 'Кваздатель'
+            kwakRu: 'Кваздатель',
+            kwakEn: 'Kwator'
         }
     }
 ]

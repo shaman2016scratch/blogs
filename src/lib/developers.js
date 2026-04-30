@@ -5,7 +5,8 @@ const developers = [
         role: 'Creator, main developer and programer',
         translateRole: {
             ru: 'Создатель, главный разработчик и программист.',
-            kwakRu: 'Кваздатель, главный жабостроитель и жабонист'
+            kwakRu: 'Кваздатель, главный жабостроитель и жабонист',
+            kwakEn: 'Kwator, main toadbuilder and toadmist'
         }
     }
 ]

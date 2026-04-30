@@ -1,12 +1,28 @@
-import { useState } from "react";
 import { newMessage, Message } from '../utils/message.jsx'
 import { metadata } from '../../lib/metadata.js'
 import { genPath } from '../../lib/genUrl.js'
 
-const TopPanel = (props) => {
-	const [input, setInput] = useState("");
-	const [error, setError] = useState(null);
-	const [loading, setLoading] = useState(false);
+const TopPanel = () => {
+    const isLogin = false
+    const userComponent = () => {
+        const loginComponent = (
+            <div></div>
+        )
+        const userMenuComponent = () => {
+            return (
+                <div></div>
+            )
+        }
+        return (
+            <div>
+                {isLogin ? (
+                    <loginComponent />
+                ) : (
+                    <userMenuComponent />
+                )}
+            </div>
+        )
+    }
 	return (
 		<div class="top-panel">
             <a href={genPath('')}>

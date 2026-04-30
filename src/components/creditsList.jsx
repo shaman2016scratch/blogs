@@ -23,12 +23,19 @@ const CreditsComponent = ({list, type, isList, labelText, labelId}) => {
         )
     }
     const GetMan = ({data}) => {
+        const isMan = data !== null || data !== undefined
         return (
-            <li>
-                <b>{data.name}</b> 
-                <i>{langIsEn ? data.role : data.transtaleRole[lang]}</i> |
-                <githubLink user={data} />
-            </li>
+            <div>
+                {isMan ? (
+                    <li>
+                        <b>{data.name}</b> 
+                        <i>{langIsEn ? data.role : data.translateRole[lang]}</i> |
+                        <githubLink user={data} />
+                    </li>
+                ) : (
+                    <p>Error: Not found</p>
+                )}
+            </div>
         )
     }
     const typeUl = type === 'ul'

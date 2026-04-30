@@ -4,6 +4,32 @@ import { genPath, genUrlNotBlogs } from '../../lib/genUrl.js'
 import BlogList from '../../components/blog/blogList.jsx'
 import blogs8787api from 'blogs8787api.js'
 
-const BlogPage = () => {}
+const BlogPage = ({user, isUser}) => {
+    const isBlog = !isUser
+    const UserPage = () => {
+        return (
+            <div></div>
+        )
+    }
+    const BlogPage2 = () => {
+        return (
+            <div></div>
+        )
+    }
+    const Render = () => {
+        return (
+            <div>
+                {isUser ? (
+                    <UserPage />
+                ) : (
+                    <BlogPage2 />
+                )}
+            </div>
+        )
+    }
+    return (
+        <Render />
+    )
+}
 
 export { BlogPage }
