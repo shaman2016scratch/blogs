@@ -13,7 +13,7 @@ const newMessage = (params) => {
             lang,
             data: params.data
         })
-    } 
+    }
     return message
 }
 

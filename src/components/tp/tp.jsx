@@ -1,14 +1,17 @@
 import { newMessage, Message } from '../utils/message.jsx'
 import { metadata } from '../../lib/metadata.js'
 import { genPath } from '../../lib/genUrl.js'
+import { isLogin } from '../../lib/session.js'
 
 const TopPanel = () => {
-    const isLogin = false
-    const userComponent = () => {
-        const loginComponent = (
-            <div></div>
+    const UserComponent = () => {
+        const LoginTPComponent = (
+            <div>
+                <a href={genPath('login')}><Message id={'tp.login'} /></a>
+                <a href={genPath('join')}><Message id={'tp.join'} /></a>
+            </div>
         )
-        const userMenuComponent = () => {
+        const UserMenuComponent = () => {
             return (
                 <div></div>
             )
@@ -16,9 +19,9 @@ const TopPanel = () => {
         return (
             <div>
                 {isLogin ? (
-                    <loginComponent />
+                    <LoginTPComponent />
                 ) : (
-                    <userMenuComponent />
+                    <UserMenuComponent />
                 )}
             </div>
         )
@@ -38,6 +41,7 @@ const TopPanel = () => {
                     id: 'footer.credits.text'
                 })}
             </a>
+            <UserComponent />
         </div>
 	);
 };

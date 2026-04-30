@@ -5,6 +5,8 @@ import Developers from "./components/developers/developers.jsx";
 import AboutBlogs from "./pages/about/about.jsx";
 import BlogList from "./components/blog/blogList.jsx";
 import CreditsBlogs from './pages/credits/credits.jsx'
+import LoginPage from "./pages/login/login.jsx";
+import JoinPage from "./pages/join/join.jsx";
 
 const App = () => {
 	const page = window.location.pathname.split("/blogs")[1]
@@ -44,6 +46,10 @@ const App = () => {
 		return (
 			<CreditsBlogs />
 		)
+	} else if (page === "/login.html" || page === "/login") {
+		<LoginPage />
+	} else if (page === "/join.html" || page === "/join") {
+		<JoinPage />
 	} else {
 		document.getElementById("title").textContent = newMessage({
             id: 'error.pageInDev.title.text'

@@ -256,7 +256,25 @@ let messages = {
     'creditsComponent.error.userNotInGithub': {
         value: function(data) {
             if (data.lang === 'ru') {
-                return `К сожелению, нет в Github`
+                return `К сожелению, его нет в Github`
+            }
+        }
+    },
+    'tp.login': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Войти`
+            } else if (data.lang === 'en') {
+                return `Log in`
+            }
+        }
+    },
+    'tp.join': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Присоеденится к ${metadata.zaname}`
+            } else if (data.lang === 'en') {
+                return `Join ${metadata.zaname}`
             }
         }
     }

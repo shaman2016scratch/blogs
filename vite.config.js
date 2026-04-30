@@ -20,6 +20,8 @@ export default defineConfig({
         blogs: resolve(__dirname, 'blogs.html'),
         about: resolve(__dirname, 'about.html'),
         credits: resolve(__dirname, 'credits.html'),
+        login: resolve(__dirname, 'login.html'),
+        join: resolve(__dirname, 'join.html'),
       }
     }
   }
