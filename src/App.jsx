@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { newMessage } from "./components/utils/message.jsx";
+import { newMessage, Message } from "./components/utils/message.jsx";
 import Authors from "./components/authors/authors.jsx";
 import Developers from "./components/developers/developers.jsx";
 import AboutBlogs from "./pages/about/about.jsx";
@@ -25,7 +25,7 @@ const App = () => {
                     id: 'pages.main.developers.header'
                 })}</h2>
 				<Developers />
-				<Message id='Rekomendacii.header' />
+				<h2><Message id='Rekomendacii.header' /></h2>
 				<BlogList type='inRecommendations' />
             </div>
 	    );
