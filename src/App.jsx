@@ -25,7 +25,7 @@ const App = () => {
                     id: 'pages.main.developers.header'
                 })}</h2>
 				<Developers />
-				<BlogList type='rekomendacii' />
+				<BlogList type='inRecommendations' />
             </div>
 	    );
 	} else if (page === "/about.html" || page === "/about") {
