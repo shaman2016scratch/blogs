@@ -4,11 +4,6 @@ import { genUrlNotBlogs } from '../lib/genUrl.js'
 const CreditsComponent = ({list, type, isList, labelText, labelId}) => {
     const lang = localStorage.getItem('blogs8787-language')
     const langIsEn = lang === 'en'
-    function userNotInGithub() {
-        alert(newMessage({
-            id: 'creditsComponent.error.userNotInGithub'
-        }))
-    }
     const githubLink = ({user}) => {
         const isGithub = user.githubName !== null
         const link = genUrlNotBlogs('https://github.com', user.githubName)
@@ -17,9 +12,7 @@ const CreditsComponent = ({list, type, isList, labelText, labelId}) => {
                 {isGithub ? (
                     <a href={link}>Github</a>
                 ) : (
-                    <div onClick={() => userNotInGithub()}>
-                        <p>Github</p>
-                    </div>
+                    Github
                 )}
             </div>
         )
@@ -34,8 +27,7 @@ const CreditsComponent = ({list, type, isList, labelText, labelId}) => {
             <div>
                 {isMan ? (
                     <li>
-                        <b>{data.name}</b> 
-                        <i>{role}</i> | 
+                        <b>{data.name}</b> (<i>{role}</i>) | 
                         <githubLink user={data} />
                     </li>
                 ) : (

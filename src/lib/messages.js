@@ -253,13 +253,6 @@ let messages = {
             }
         }
     },
-    'creditsComponent.error.userNotInGithub': {
-        value: function(data) {
-            if (data.lang === 'ru') {
-                return `К сожелению, его нет в Github`
-            }
-        }
-    },
     'tp.login': {
         value: function(data) {
             if (data.lang === 'ru') {
