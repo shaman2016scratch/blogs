@@ -47,9 +47,19 @@ const App = () => {
 			<CreditsBlogs />
 		)
 	} else if (page === "/login.html" || page === "/login") {
-		<LoginPage />
+		document.getElementById("title").textContent = newMessage({
+            id: 'login.pageTitle'
+        })
+		return (
+			<LoginPage />
+		)
 	} else if (page === "/join.html" || page === "/join") {
-		<JoinPage />
+		document.getElementById("title").textContent = newMessage({
+            id: 'join.pageTitle'
+        })
+		return (
+			<JoinPage />
+		)
 	} else {
 		document.getElementById("title").textContent = newMessage({
             id: 'error.pageInDev.title.text'

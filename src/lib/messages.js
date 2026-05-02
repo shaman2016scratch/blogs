@@ -256,7 +256,7 @@ let messages = {
     'tp.login': {
         value: function(data) {
             if (data.lang === 'ru') {
-                return `Войти`
+                return `Вход`
             } else if (data.lang === 'en') {
                 return `Log in`
             }
@@ -265,9 +265,27 @@ let messages = {
     'tp.join': {
         value: function(data) {
             if (data.lang === 'ru') {
-                return `Присоеденится к ${metadata.zaname}`
+                return `Присоеденяйся!`
             } else if (data.lang === 'en') {
-                return `Join ${metadata.zaname}`
+                return `Join`
+            }
+        }
+    },
+    'login.pageTitle': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Вход | ${metadata.zaname} - новая платформа для блогов`
+            } else if (data.lang === 'en') {
+                return `Login | ${metadata.zaname}`
+            }
+        }
+    },
+    'join.pageTitle': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Регестрация | ${metadata.zaname} - новая платформа для блогов`
+            } else if (data.lang === 'en') {
+                return `Regestration | ${metadata.zaname}`
             }
         }
     }
