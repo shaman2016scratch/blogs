@@ -3,7 +3,7 @@ import { newMessage, genMessage, customMessage, Message } from '../utils/message
 import BLOG from './blogInList.jsx'
 import blogs8787api from 'blogs8787api.js'
 
-const BlogList = async ({type}) => {
+const BlogList = ({type}) => {
     const [recommendations, setRecommendations] = useState([]);
     const [loading, setLoading] = useState(true);
     const isInUser = type === 'inUser'
