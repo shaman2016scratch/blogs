@@ -5,7 +5,7 @@ import blogs8787api from 'blogs8787api.js'
 const BlogList = ({type}) => {
     const isInUser = type === 'inUser'
     const isInRecommendations = type === 'inRecommendations'
-    const recomendations = blogs8787api.recomendations().list
+    const recomendations = (await blogs8787api.recomendations()).list
     return (
         <div class='blogs'>
             {isInUser ? (
