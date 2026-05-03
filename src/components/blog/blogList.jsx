@@ -40,7 +40,7 @@ const BlogList = ({type}) => {
                         <p>Loading</p>
                     ) : (
                         <div>
-                            {recomendations.map((blog) => (
+                            {recommendations.map((blog) => (
                                 <BLOG id={blog.id} name={blog.name} author={blog.author} />
                             ))}
                         </div>
