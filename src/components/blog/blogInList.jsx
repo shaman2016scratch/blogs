@@ -1,6 +1,7 @@
 import { newMessage, genMessage, customMessage } from '../utils/message.jsx'
+import { Emoji } from '../emoji/emoji.jsx'
 
-const BLOG = (id, name, author) => {
+const BLOG = ({id, name, author}) => {
   return (
     <div class='blogInList'>
       <h3>{name}</h3>

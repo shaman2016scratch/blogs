@@ -4,9 +4,10 @@ import { genPath, genUrlNotBlogs } from '../../lib/genUrl.js'
 import { formatedWarn } from '../../style/style.jsx'
 import BlogList from '../../components/blog/blogList.jsx'
 import blogs8787api from 'blogs8787api.js'
+import { Task } from '../../components/task/task.jsx'
+import { Emoji } from '../../components/emoji/emoji.jsx'
 
 const BlogPage = ({user, isUser}) => {
-    const isBlog = !isUser
     const UserPage = () => {
         return (
             <div></div>
