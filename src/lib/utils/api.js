@@ -12,4 +12,4 @@ async function loginBlogs(id, scratch) {
 
 async function joinBlogs() {}
 
-export { loginBlogs, joinBlogs }
+export { getAuthCode, loginBlogs, joinBlogs }
