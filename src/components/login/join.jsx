@@ -9,7 +9,7 @@ const JoinComponent = () => {
             <input type='number' id='id' />
             <br /><label for='pass'>Password </label>
             <input type='password' id='pass' />
-            <br /><button type='submit'>JOIN</button>
+            <br /><button type='submit' onClick={() => joinBlogs}>JOIN</button>
         </div>
     )
 }
