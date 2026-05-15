@@ -70,7 +70,7 @@ const Message = ({data, id}) => {
 
 const Warn = ({data, id}) => {
     return (
-        <div>
+        <div class='warn'>
             {newWarn({
                 id,
                 data
@@ -87,6 +87,17 @@ const ErrorFromMessage = ({data, id}) => {
                 data
             })}
         </div>
+    )
+}
+
+const LinkFromMessage = ({data, id, url}) => {
+    return (
+        <a>
+            {newMessage({
+                id,
+                data
+            })}
+        </a>
     )
 }
 

@@ -1,31 +1,20 @@
-import { newMessage, Message } from '../utils/message.jsx'
+import { newMessage, Message, LinkFromMessage } from '../utils/message.jsx'
 import { metadata } from '../../lib/metadata.js'
 import { genPath } from '../../lib/genUrl.js'
 import { isLogin } from '../../lib/session.js'
 
 const TopPanel = () => {
-    const UserComponent = () => {
-        const LoginTPComponent = () => {
-            return (
-                <div>
-                    <a href={genPath('login')}><Message id={'tp.login'} /></a>
-                    <a href={genPath('join')}><Message id={'tp.join'} /></a>
-                </div>
-            )
-        }
-        const UserMenuComponent = () => {
-            return (
-                <div></div>
-            )
-        }
+    const LoginTPComponent = () => {
         return (
             <div>
-                {isLogin ? (
-                    <LoginTPComponent />
-                ) : (
-                    <UserMenuComponent />
-                )}
+                <LinkFromMessage id={'tp.login'} url={genPath('login')} />
+                <LinkFromMessage id={'tp.join'} url={genPath('join')} />
             </div>
+        )
+    }
+    const UserMenuComponent = () => {
+        return (
+            <div>[Image] [username]</div>
         )
     }
 	return (
@@ -43,7 +32,11 @@ const TopPanel = () => {
                     id: 'footer.credits.text'
                 })}
             </a>
-            <UserComponent />
+            {isLogin ? (
+                <LoginTPComponent />
+            ) : (
+                <UserMenuComponent />
+            )}
         </div>
 	);
 };
