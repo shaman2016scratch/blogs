@@ -7,8 +7,8 @@ const TopPanel = () => {
     const LoginTPComponent = () => {
         return (
             <>
-                <LinkFromMessage id={'tp.login'} url={genPath('login')} />
-                <LinkFromMessage id={'tp.join'} url={genPath('join')} />
+                <LinkFromMessage id={'tp.login'} href={genPath('login')} />
+                <LinkFromMessage id={'tp.join'} href={genPath('join')} />
             </>
         )
     }

@@ -90,9 +90,9 @@ const ErrorFromMessage = ({data, id}) => {
     )
 }
 
-const LinkFromMessage = ({data, id, url}) => {
+const LinkFromMessage = ({data, id, href}) => {
     return (
-        <a>
+        <a href={href}>
             {newMessage({
                 id,
                 data
