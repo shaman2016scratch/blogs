@@ -6,15 +6,15 @@ import { isLogin } from '../../lib/session.js'
 const TopPanel = () => {
     const LoginTPComponent = () => {
         return (
-            <div>
+            <>
                 <LinkFromMessage id={'tp.login'} url={genPath('login')} />
                 <LinkFromMessage id={'tp.join'} url={genPath('join')} />
-            </div>
+            </>
         )
     }
     const UserMenuComponent = () => {
         return (
-            <div>[Image] [username]</div>
+            <>[Image] [username]</>
         )
     }
 	return (

@@ -101,4 +101,4 @@ const LinkFromMessage = ({data, id, url}) => {
     )
 }
 
-export { newMessage, newWarn, customMessage, genMessage, Message, Warn, ErrorFromMessage }
+export { newMessage, newWarn, customMessage, genMessage, Message, Warn, ErrorFromMessage, LinkFromMessage }
