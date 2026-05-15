@@ -288,6 +288,42 @@ let messages = {
                 return `Regestration | ${metadata.zaname}`
             }
         }
+    },
+    'ok.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Окей`
+            } else if (data.lang === 'en') {
+                return `Okay`
+            }
+        }
+    },
+    'error.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Ошибка:`
+            } else if (data.lang === 'en') {
+                return `Error`
+            }
+        }
+    },
+    'confirm.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Подтвердил`
+            } else if (data.lang === 'en') {
+                return `Confirm`
+            }
+        }
+    },
+    'scratchaccount.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Скретч аккаунт`
+            } else if (data.lang === 'en') {
+                return `Scratch account`
+            }
+        }
     }
 }
 

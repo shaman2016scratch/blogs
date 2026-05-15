@@ -9,11 +9,11 @@ async function loginOk() {
     try {
         await loginBlogs()
         message.render(
-            <p>Ok!</p>
+            <p><Message id='ok.text' /></p>
         )
     } catch (error) {
         message.render(
-            <p>Error: {error.message}</p>
+            <p><Message id='error.text' />: {error.message}</p>
         )
     }
 }
@@ -23,7 +23,7 @@ async function loginInBlogs() {
     createRoot(document.getElementById("message")).render(
         <div>
             <p>Confirm account - send '${authCode}' to <a href='https://scratch.mit.edu/projects/1297964685/'>this project</a></p>
-            <button onClick={() => loginOk()}>CONFIRM</button>
+            <button onClick={() => loginOk()}><Message id='confirm.text' /></button>
         </div>
     )
 }
@@ -34,7 +34,7 @@ const LoginComponent = () => {
             <h1><Message id={'tp.login'} /></h1>
             <label for='id'>ID </label>
             <input type='number' id='id' />
-            <br /><label for='pass'>Scratch account </label>
+            <br /><label for='pass'><Message id='scratchaccount.text' /> </label>
             <input id='scratch' />
             <div id='message'>
                 <p>Tap login button.</p>

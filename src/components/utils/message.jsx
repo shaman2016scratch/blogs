@@ -79,4 +79,15 @@ const Warn = ({data, id}) => {
     )
 }
 
-export { newMessage, newWarn, customMessage, genMessage, Message, Warn }
+const ErrorFromMessage = ({data, id}) => {
+    return (
+        <div class='error'>
+            {newMessage({
+                id,
+                data
+            })}
+        </div>
+    )
+}
+
+export { newMessage, newWarn, customMessage, genMessage, Message, Warn, ErrorFromMessage }

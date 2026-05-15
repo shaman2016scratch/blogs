@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { newMessage, Message } from "./components/utils/message.jsx";
+import { newMessage, Message, ErrorFromMessage } from "./components/utils/message.jsx";
 import Authors from "./components/authors/authors.jsx";
 import Developers from "./components/developers/developers.jsx";
 import AboutBlogs from "./pages/about/about.jsx";
@@ -67,9 +67,7 @@ const App = () => {
         return (
 			<div>
 			    <h1>Blogs8787</h1>
-                <p>{newMessage({
-                    id: 'error.pageInDev.text1'
-                })}</p>
+                <ErrorFromMessage id='error.pageInDev.text1' />
             </div>
 	    );
     }
