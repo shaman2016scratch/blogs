@@ -37,11 +37,11 @@ const TopPanel = () => {
             </a>
             <LinkFromMessage
                 id='footer.about.text'
-                href={getPath('about')}
+                href={genPath('about')}
             />
             <LinkFromMessage
                 id='footer.credits.text'
-                href={getPath('credits')}
+                href={genPath('credits')}
             />
             <Search />
             <LinkFromMessage
@@ -49,7 +49,7 @@ const TopPanel = () => {
                 data={{
                     default: 'Новости'
                 }}
-                href={getPath('news')}
+                href={genPath('news')}
             />
             <ProfileComponent />
         </div>
