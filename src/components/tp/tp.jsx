@@ -45,6 +45,14 @@ const TopPanel = () => {
                 })}
             </a>
             <Search />
+            <a href={genPath('news')}>
+                {newMessage({
+                    id: 'footer.news.text',
+                    data: {
+                        default: 'Новости'
+                    }
+                })}
+            </a>
             <ProfileComponent />
         </div>
 	);

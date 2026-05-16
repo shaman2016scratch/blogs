@@ -23,6 +23,7 @@ export default defineConfig({
         credits: resolve(__dirname, 'credits.html'),
         login: resolve(__dirname, 'login.html'),
         join: resolve(__dirname, 'join.html'),
+        news: resolve(__dirname, 'news.html')
       }
     }
   }
