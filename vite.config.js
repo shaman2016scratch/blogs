@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import {resolve} from 'path';
+import { metadata } from './src/lib/metadata.js';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,7 +12,7 @@ export default defineConfig({
       }
     })
   ],
-  base: '/blogs',
+  base: metadata.path2,
   build: {
     rollupOptions: {
       input: {

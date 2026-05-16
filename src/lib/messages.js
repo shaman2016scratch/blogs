@@ -265,7 +265,7 @@ let messages = {
     'tp.join': {
         value: function(data) {
             if (data.lang === 'ru') {
-                return `Присоеденяйся!`
+                return `Присоединяйся!`
             } else if (data.lang === 'en') {
                 return `Join`
             }
