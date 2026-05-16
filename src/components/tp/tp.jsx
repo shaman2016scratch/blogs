@@ -2,6 +2,7 @@ import { newMessage, Message, LinkFromMessage } from '../utils/message.jsx'
 import { metadata } from '../../lib/metadata.js'
 import { genPath } from '../../lib/genUrl.js'
 import { isLogin } from '../../lib/session.js'
+import Search from './search.jsx'
 
 const TopPanel = () => {
     const LoginTPComponent = () => {
@@ -15,6 +16,17 @@ const TopPanel = () => {
     const UserMenuComponent = () => {
         return (
             <>[Image] [username]</>
+        )
+    }
+    const ProfileComponent = () => {
+        return (
+            <>
+                {isLogin ? (
+                    <LoginTPComponent />
+                ) : (
+                    <UserMenuComponent />
+                )}
+            </>
         )
     }
 	return (
@@ -32,11 +44,8 @@ const TopPanel = () => {
                     id: 'footer.credits.text'
                 })}
             </a>
-            {isLogin ? (
-                <LoginTPComponent />
-            ) : (
-                <UserMenuComponent />
-            )}
+            <Search />
+            <ProfileComponent />
         </div>
 	);
 };

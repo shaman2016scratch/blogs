@@ -7,7 +7,7 @@ const newMessage = (params) => {
     } else {
         lang = params.language
     }
-    let message = 'Error in get element'
+    let message = params.data.default || 'Error in get element'
     if (messages[params.id]) {
         message = messages[params.id].value({
             lang,
