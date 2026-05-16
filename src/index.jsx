@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import ThemeManager from './components/setTheme.jsx'
 import App from "./App.jsx";
 import TopPanel from "./components/tp/tp.jsx";
-import { newMessage } from "./components/utils/message.jsx";
+import { newMessage, LinkFromMessage } from "./components/utils/message.jsx";
 import { metadata } from "./lib/metadata.js"
 import { genPath, genUrl } from './lib/genUrl.js'
 
@@ -30,12 +30,14 @@ createRoot(document.getElementById("root")).render(
 				<p class='footer-text'>© MIT LICENSE</p>
 				<p class='footer-text'>
 					<a href={genPath('')}>{metadata.name}</a> | 
-					<a href={genPath('about')}>{newMessage({
-                        id: 'footer.about.text'
-                    })}</a> | 
-                    <a href={genPath('credits')}>{newMessage({
-                        id: 'footer.credits.text'
-                    })}</a>
+                    <LinkFromMessage
+                        id='footer.about.text'
+                        href={genPath('about')}
+                    /> | 
+                    <LinkFromMessage
+                        id='footer.credits.text'
+                        href={genPath('credits')}
+                    />
 				</p>
 				<p class="footer-text">{newMessage({
                     id: 'footer.version'
@@ -46,8 +48,8 @@ createRoot(document.getElementById("root")).render(
 				<select id='languageUser'>
                     <option value="ru">Русский</option>
                     <option value="en">English</option>
-					<option value="kwakRu">Квак (ру)</option>
-					<option value="kwakEn">Kwak (en)</option>
+					<option value="kwakRu">Квак</option>
+					<option value="kwakEn">Kwak</option>
                 </select><button onClick={() => updLang()}>{newMessage({
                     id: 'footer.languageSet.button.text'
                 })}</button>

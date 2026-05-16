@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { newMessage, Message, ErrorFromMessage } from "./components/utils/message.jsx";
+import { newMessage, Message, ErrorFromMessage, LinkFromMessage } from "./components/utils/message.jsx";
 import { newsInMainPage } from "./lib/news.js";
 import Authors from "./components/authors/authors.jsx";
 import Developers from "./components/developers/developers.jsx";

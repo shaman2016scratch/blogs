@@ -31,28 +31,26 @@ const TopPanel = () => {
     }
 	return (
 		<div class="top-panel">
+            
             <a href={genPath('')}>
                 {metadata.zaname}
             </a>
-            <a href={genPath('about')}>
-                {newMessage({
-                    id: 'footer.about.text'
-                })}
-            </a>
-            <a href={genPath('credits')}>
-                {newMessage({
-                    id: 'footer.credits.text'
-                })}
-            </a>
+            <LinkFromMessage
+                id='footer.about.text'
+                href={getPath('about')}
+            />
+            <LinkFromMessage
+                id='footer.credits.text'
+                href={getPath('credits')}
+            />
             <Search />
-            <a href={genPath('news')}>
-                {newMessage({
-                    id: 'footer.news.text',
-                    data: {
-                        default: 'Новости'
-                    }
-                })}
-            </a>
+            <LinkFromMessage
+                id='footer.news.text'
+                data={{
+                    default: 'Новости'
+                }}
+                href={getPath('news')}
+            />
             <ProfileComponent />
         </div>
 	);
