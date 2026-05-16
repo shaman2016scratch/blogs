@@ -49,3 +49,10 @@ body {
   color: #000000;
   background-color: #ffe600;
 }
+.top-panel input {
+  color: #000000;
+  background-color: #ff0000;
+}
+.top-panel button {
+  background-color: #b10d0d;
+}
