@@ -12,4 +12,12 @@ async function loginBlogs(id, scratch) {
 
 async function joinBlogs() {}
 
+async function getNameByUserBlogs(user) {
+    return blogs8787api.info.getName.user(user)
+}
+
+async function getNameByBlog(blog) {
+    return blogs8787api.info.getName.blog(blog)
+}
+
 export { getAuthCode, loginBlogs, joinBlogs }
