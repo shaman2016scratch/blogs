@@ -237,7 +237,7 @@ let messages = {
             }
         }
     },
-    'pages.main.moderators.header': {
+    'pages.credits.moderators.header': {
         value: function(data) {
             if (data.lang === 'ru') {
                 return `Модераторы`
@@ -322,6 +322,19 @@ let messages = {
                 return `Скретч аккаунт`
             } else if (data.lang === 'en') {
                 return `Scratch account`
+            }
+        }
+    },
+    'tp.news.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Новости`
+            } else if (data.lang === 'en') {
+                return `News`
+            } else if (data.lang === 'kwakRu') {
+                return `Квакности`
+            } else if (data.lang === 'kwakEn') {
+                return `Kwakews`
             }
         }
     }

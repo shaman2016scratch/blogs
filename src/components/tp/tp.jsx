@@ -45,7 +45,7 @@ const TopPanel = () => {
             />
             <Search />
             <LinkFromMessage
-                id='footer.news.text'
+                id='tp.news.text'
                 data={{
                     default: 'Новости'
                 }}

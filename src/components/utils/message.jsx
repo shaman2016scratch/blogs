@@ -14,6 +14,9 @@ const newMessage = (params) => {
             data: params.data
         })
     }
+    if (message === '') {
+        message = params.data?.default || 'Error in get element'
+    }
     return message
 }
 
