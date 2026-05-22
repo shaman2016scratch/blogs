@@ -1,14 +1,15 @@
 import { metadata } from './metadata.js'
+import blogs8787api from 'blogs8787api.js'
 
 let messages = {
     'footer.version': {
         value: function(data) {
             if (data.lang === 'ru') {
-                return `Версия: ${metadata.version}`
+                return `Версия: ${metadata.version}, Версия библиотеки для API: ${blogs8787api.library.version}`
             } else if (data.lang === 'en') {
-                return `Version: ${metadata.version}`
+                return `Version: ${metadata.version}, version library for API: ${blogs8787api.library.version}`
             } else if (data.lang === 'kwakRu') {
-                return `Кварсия: ${metadata.version}`
+                return `Кварсия: ${metadata.version}, Кварсия Болототеки ква API: ${blogs8787api.library.version}`
             }
         }
     },

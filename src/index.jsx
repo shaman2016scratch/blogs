@@ -29,7 +29,7 @@ createRoot(document.getElementById("root")).render(
                 })}</p>
 				<p class='footer-text'>© MIT LICENSE</p>
 				<p class='footer-text'>
-					<a href={genPath('')}>{metadata.name}</a> | 
+					<a href={genPath('')}>{metadata.zaname}</a> | 
                     <LinkFromMessage
                         id='footer.about.text'
                         href={genPath('about')}
