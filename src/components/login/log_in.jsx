@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { getAuthCode, loginBlogs } from "../../lib/utils/api.js"
-import { Message } from "../utils/message.jsx"
+import { Message, ButtonFromMessage, Warn } from "../utils/message.jsx"
 
 async function loginOk() {
     const id = document.getElementById('id')
@@ -31,14 +31,15 @@ async function loginInBlogs() {
 const LoginComponent = () => {
     return (
         <div>
+            <Warn id='inDev.text' />
             <h1><Message id={'tp.login'} /></h1>
             <label for='id'>ID </label>
             <input type='number' id='id' />
             <br /><label for='pass'><Message id='scratchaccount.text' /> </label>
             <input id='scratch' />
             <div id='message'>
-                <p>Tap login button.</p>
-                <button onClick={() => loginInBlogs}>LOGIN</button>
+                <p><Message id='loginPage.taploginbutton' /></p>
+                <ButtonFromMessage id='loginPage.loginButton' onclick={() => loginInBlogs} />
             </div>
         </div>
     )

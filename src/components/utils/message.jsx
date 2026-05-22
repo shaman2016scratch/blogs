@@ -62,12 +62,12 @@ const genMessage = ({params, paramsM}) => {
 
 const Message = ({data, id}) => {
     return (
-        <div>
+        <>
             {newMessage({
                 id,
                 data
             })}
-        </div>
+        </>
     )
 }
 
@@ -104,4 +104,29 @@ const LinkFromMessage = ({data, id, href}) => {
     )
 }
 
-export { newMessage, newWarn, customMessage, genMessage, Message, Warn, ErrorFromMessage, LinkFromMessage }
+const ButtonFromMessage = ({data, id, onclick, isOnClick, btype}) => {
+    return (
+        <button
+            type={btype}
+            onClick={isOnClick ? onclick : () => {}}
+        >
+            {newMessage({
+                id,
+                data
+            })}
+        </button>
+    )
+}
+
+const DivFromMessage = ({data, id, eclass, eid}) => {
+    return (
+        <div class={eclass} id={eid}>
+            {newMessage({
+                id,
+                data
+            })}
+        </div>
+    )
+}
+ 
+export { newMessage, newWarn, customMessage, genMessage, Message, Warn, ErrorFromMessage, LinkFromMessage, ButtonFromMessage, DivFromMessage }

@@ -33,7 +33,7 @@ const App = () => {
 				<Developers />
 				<h2><Message id='Rekomendacii.header' /></h2>
 				<BlogList type='inRecommendations' />
-				<h2>News</h2>
+				<h2><Message id='news.text' /></h2>
 				<NewsComponent newsData={newsInMainPage} />
             </div>
 	    );

@@ -338,6 +338,58 @@ let messages = {
                 return `Kwakews`
             }
         }
+    },
+    'news.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Новости`
+            } else if (data.lang === 'en') {
+                return `News`
+            } else if (data.lang === 'kwakRu') {
+                return `Квакности`
+            } else if (data.lang === 'kwakEn') {
+                return `Kwakews`
+            }
+        }
+    },
+    'password.text': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Пароль`
+            } else if (data.lang === 'en') {
+                return `Password`
+            } else if (data.lang === 'kwakRu') {
+                return `Квароль`
+            } else if (data.lang === 'kwakEn') {
+                return `Kwasword`
+            }
+        }
+    },
+    'loginPage.taploginbutton': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Нажмите на кнопку входа`
+            } else if (data.lang === 'en') {
+                return `Tap login button`
+            } else if (data.lang === 'kwakRu') {
+                return `Кважмите на квапку квака`
+            } else if (data.lang === 'kwakEn') {
+                return `Kwatap kwak kwutton`
+            }
+        }
+    },
+    'loginPage.loginButton': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `ВОЙТИ`
+            } else if (data.lang === 'en') {
+                return `LOGIN`
+            } else if (data.lang === 'kwakRu') {
+                return `Квак`
+            } else if (data.lang === 'kwakEn') {
+                return `Kwak`
+            }
+        }
     }
 }
 
