@@ -1,4 +1,5 @@
 import { news } from "../../lib/news.js";
+import { Message } from "../../components/utils/message.jsx";
 import NewsComponent from "../../components/news/news.jsx";
 
 const NewsPage = () => {
