@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 import ThemeManager from './components/setTheme.jsx'
 import App from "./App.jsx";
 import TopPanel from "./components/tp/tp.jsx";
-import { newMessage, LinkFromMessage } from "./components/utils/message.jsx";
+import { newMessage, LinkFromMessage, Message } from "./components/utils/message.jsx";
 import { metadata } from "./lib/metadata.js"
 import { genPath, genUrl, genThisURL } from './lib/genUrl.js'
 import { styles } from "./style/style.js";
