@@ -14,6 +14,9 @@ let styles = {
     themes: {
         theme1,
         theme2
+    },
+    class: {
+        link: 'linkElement'
     }
 }
 

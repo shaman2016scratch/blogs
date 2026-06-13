@@ -5,7 +5,8 @@ import App from "./App.jsx";
 import TopPanel from "./components/tp/tp.jsx";
 import { newMessage, LinkFromMessage } from "./components/utils/message.jsx";
 import { metadata } from "./lib/metadata.js"
-import { genPath, genUrl } from './lib/genUrl.js'
+import { genPath, genUrl, genThisURL } from './lib/genUrl.js'
+import { styles } from "./style/style.js";
 
 if (!localStorage.getItem('blogs8787-language')) {
 	localStorage.setItem('blogs8787-language', 'ru')
@@ -30,14 +31,16 @@ createRoot(document.getElementById("root")).render(
 				<p class='footer-text'>© MIT LICENSE</p>
 				<p class='footer-text'>
 					<a href={genPath('')}>{metadata.zaname}</a> | 
-                    <LinkFromMessage
-                        id='footer.about.text'
-                        href={genPath('about')}
-                    /> | 
-                    <LinkFromMessage
-                        id='footer.credits.text'
-                        href={genPath('credits')}
-                    />
+                    <div class={styles.class.link} onClick={() => {genThisURL(metadata.domain, 'about')}}>
+                        <Message
+                            id='footer.about.text'
+                        />
+                    </div>
+                    <div class={styles.class.link} onClick={() => {genThisURL(metadata.domain, 'credits')}}>
+                        <Message
+                            id='footer.credits.text'
+                        />
+                    </div>
 				</p>
 				<p class="footer-text">{newMessage({
                     id: 'footer.version'

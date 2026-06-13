@@ -16,4 +16,8 @@ const genPathNotBlogs = (path) => {
     return `/${path}`
 }
 
-export { genUrl, genPath, genUrlNotBlogs, genPathNotBlogs }
+const genThisURL = (domain, path) => {
+    window.location.href = genUrl(domain, path)
+}
+
+export { genUrl, genPath, genUrlNotBlogs, genPathNotBlogs, genThisURL }

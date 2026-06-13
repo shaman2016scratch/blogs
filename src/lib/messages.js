@@ -390,6 +390,15 @@ let messages = {
                 return `Kwak`
             }
         }
+    },
+    'tp.search.button': {
+        value: function(data) {
+            if (data.lang === 'ru') {
+                return `Искать`
+            } else if (data.lang === 'en') {
+                return `Search`
+            }
+        }
     }
 }
 
