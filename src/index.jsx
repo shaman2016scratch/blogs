@@ -20,9 +20,9 @@ function updTheme() {localStorage.setItem('blogs8787-theme', document.getElement
 
 createRoot(document.getElementById("root")).render(
 	<StrictMode>
+        <ThemeManager />
         <TopPanel />
 		<App />
-        <ThemeManager />
 		<footer>
             <div class="container">
                 <p class="footer-text">{newMessage({
@@ -30,7 +30,9 @@ createRoot(document.getElementById("root")).render(
                 })}</p>
 				<p class='footer-text'>© MIT LICENSE</p>
 				<p class='footer-text'>
-					<a href={genPath('')}>{metadata.zaname}</a> | 
+					<div class={styles.class.link} onClick={() => {genThisURL(metadata.domain, 'a')}}>
+                        {metadata.zaname}
+                    </div> 
                     <div class={styles.class.link} onClick={() => {genThisURL(metadata.domain, 'about')}}>
                         <Message
                             id='footer.about.text'
